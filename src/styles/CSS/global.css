@@ -448,9 +448,7 @@ header {
 }
 
 .destination {
-  display: grid;
   text-align: center;
-  gap: 20px;
 }
 .destination span {
   color: #ed1f24;
@@ -480,7 +478,6 @@ header {
 .abroad-destination li {
   position: relative;
   padding-left: 30px;
-  margin-bottom: 10px;
 }
 .abroad-destination li::before {
   counter-increment: item;
@@ -500,8 +497,18 @@ header {
 }
 
 .experience {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
   position: relative;
+  background-image: url("/images/plane-left.jpg");
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: cover;
+  width: 100%;
+  min-height: 300px;
 }
 .experience span {
   color: #ed1f24;
@@ -515,28 +522,6 @@ header {
   font-size: 1rem;
   margin-top: 1rem;
   cursor: pointer;
-}
-.experience .plane-wrapper {
-  display: flex;
-  justify-content: flex-start;
-  margin-top: 2rem;
-}
-.experience .plane-container {
-  position: relative;
-  width: -moz-fit-content;
-  width: fit-content;
-}
-.experience .plane-container .plane-img {
-  position: absolute;
-  height: 100px;
-  width: 100px;
-  top: -25px;
-  left: 12px;
-  z-index: 2;
-}
-.experience .plane-container .plane-path {
-  width: 100%;
-  height: auto;
 }
 
 @media screen and (min-width: 744px) {
@@ -616,6 +601,13 @@ header {
   .medical-section-content .medical-image {
     width: 680px;
     height: 441px;
+  }
+  .abroad-destination .abroad-image {
+    height: 432px;
+  }
+  .abroad-destination .ul {
+    display: grid;
+    gap: 32px;
   }
 }
 @media screen and (min-width: 1200px) {
@@ -754,5 +746,17 @@ header {
   .medical-section-content .medical-image {
     width: 522px;
     height: 441px;
+  }
+  .abroad-destination h1 {
+    width: 700px;
+  }
+  .abroad-destination-section {
+    display: grid;
+    gap: 80px;
+    grid-template-columns: 1fr 1fr;
+    direction: rtl;
+  }
+  .abroad-destination-section > * {
+    direction: ltr;
   }
 }/*# sourceMappingURL=global.css.map */
