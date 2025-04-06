@@ -28,7 +28,7 @@ const Destination = () => {
             </h1>
           </div>
           <div className="abroad-destination-section">
-            <div>
+            <div className="mb-24">
                 <Image
                 className="abroad-image"
                 src="/images/abroad.png"

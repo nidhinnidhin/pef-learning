@@ -467,6 +467,10 @@ header {
   height: 272px;
   width: 100%;
   align-self: stretch;
+  -o-object-fit: cover;
+     object-fit: cover;
+  overflow: hidden;
+  border-radius: 12px;
 }
 .abroad-destination ul {
   counter-reset: item;
@@ -604,6 +608,8 @@ header {
   }
   .abroad-destination .abroad-image {
     height: 432px;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   .abroad-destination .ul {
     display: grid;

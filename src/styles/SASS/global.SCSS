@@ -294,6 +294,8 @@ header {
   gap: 64px;
 }
 
+// Nidhin
+
 .program-container {
   display: flex;
   flex-direction: column;
@@ -307,7 +309,6 @@ header {
       color: $primary-color;
     }
   }
-
   .search-container {
     display: flex;
     justify-content: center;
@@ -315,7 +316,6 @@ header {
     gap: 10px;
     margin-top: 30px;
     flex-wrap: wrap;
-
     .search-input {
       padding: 12px 20px;
       width: 300px;
@@ -336,7 +336,6 @@ header {
       }
     }
   }
-
   .category-grid {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -363,7 +362,6 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  // padding: 50px 20px;
   text-align: left;
 
   .opportunity-title {
@@ -471,7 +469,6 @@ header {
   }
 }
 
-// Destination
 .destination {
   text-align: center;
 
@@ -492,6 +489,9 @@ header {
     height: 272px;
     width: 100%;
     align-self: stretch;
+    object-fit: cover;
+    overflow: hidden;
+    border-radius: 12px;
   }
   ul {
     counter-reset: item;
@@ -570,6 +570,9 @@ header {
       order: 1;
     }
   }
+
+  // Nidhin
+
   .program-container {
     .category-grid {
       display: grid;
@@ -648,6 +651,7 @@ header {
   .abroad-destination {
     .abroad-image {
       height: 432px;
+      object-fit: cover;
     }
     .ul {
       display: grid;
@@ -727,6 +731,8 @@ header {
   #home-journey {
     display: block;
   }
+
+  // Nidhin
 
   .program-container {
     .category-grid {
