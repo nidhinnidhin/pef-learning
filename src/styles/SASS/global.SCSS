@@ -298,7 +298,6 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 50px 20px;
   text-align: center;
 
   .program-title {
@@ -336,21 +335,6 @@ header {
         box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.05);
       }
     }
-
-    .search-button {
-      background-color: #e50914;
-      padding: 12px 24px;
-      border: none;
-      border-radius: 8px;
-      font-weight: 500;
-      font-size: 0.95rem;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-
-      &:hover {
-        background-color: #cc0812;
-      }
-    }
   }
 
   .category-grid {
@@ -358,7 +342,6 @@ header {
     grid-template-columns: repeat(2, 1fr);
     gap: 32px 20px;
     margin-top: 50px;
-    max-width: 900px;
     margin-left: auto;
     margin-right: auto;
 
@@ -380,7 +363,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 50px 20px;
+  // padding: 50px 20px;
   text-align: left;
 
   .opportunity-title {
@@ -408,16 +391,12 @@ header {
       gap: 5px;
     }
     button {
-      color: red;
+      border: 0;
+      color: $secondary-text-color;
       background-color: transparent;
-      border: none;
-      margin-top: 5px;
       padding: 0px;
-
       &:hover {
-        background-color: #cc0812;
-        color: #fff;
-        padding: 5px 10px;
+        @extend .button;
       }
     }
     span {
@@ -490,6 +469,109 @@ header {
     align-self: stretch;
     aspect-ratio: 396/256.82;
   }
+}
+
+// Destination
+.destination {
+  display: grid;
+  text-align: center;
+  gap: 20px;
+
+  span {
+    color: $secondary-text-color;
+  }
+}
+
+.abroad-destination {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  padding: 60px 16px 120px 16px;
+  span {
+    color: $secondary-text-color;
+  }
+  .abroad-image {
+    height: 272px;
+    width: 100%;
+    align-self: stretch;
+  }
+  ul {
+    counter-reset: item;
+    padding-left: 0;
+    list-style: none;
+    display: grid;
+    gap: 32px;
+  }
+
+  li {
+    position: relative;
+    padding-left: 30px;
+    margin-bottom: 10px;
+
+    &::before {
+      counter-increment: item;
+      content: counter(item);
+      position: absolute;
+      left: 0;
+      top: 0.3rem;
+      width: 1.2rem;
+      height: 1.2rem;
+      background-color: $secondary-text-color;
+      color: $text-light;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+    }
+  }
+}
+
+.experience {
+  text-align: center;
+  position: relative;
+
+  span {
+    color: $secondary-text-color;
+  }
+
+  button {
+    background-color: $primary-color;
+    color: $text-light;
+    padding: 0.7rem 1.5rem;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    margin-top: 1rem;
+    cursor: pointer;
+  }
+
+  .plane-wrapper {
+    display: flex;
+    justify-content: flex-start; 
+    margin-top: 2rem;
+  }
+  
+  .plane-container {
+    position: relative;
+    width: fit-content;
+  
+    .plane-img {
+      position: absolute;
+      height: 100px;
+      width: 100px;
+      top: -25px;    
+      left: 12px;   
+      z-index: 2;
+    }
+  
+    .plane-path {
+      width: 100%;
+      height: auto;
+    }
+  }
+  
+  
 }
 
 @media screen and (min-width: 744px) {

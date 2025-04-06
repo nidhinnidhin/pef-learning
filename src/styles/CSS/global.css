@@ -37,7 +37,6 @@ h6,
 p,
 .p {
   font-size: 14px;
-  font-weight: bold;
 }
 
 .mb-24 {
@@ -59,7 +58,9 @@ p,
 }
 
 button, .button2,
-.button {
+.button,
+.opportunities-container .program-card button:hover,
+.opportunities-container .program-card .button2:hover {
   color: #ffffff;
   font-size: 16px;
   height: 40px;
@@ -71,7 +72,9 @@ button, .button2,
   transition: all 0.4s;
 }
 button:hover, .button2:hover,
-.button:hover {
+.button:hover,
+.opportunities-container .program-card button:hover,
+.opportunities-container .program-card .button2:hover {
   background-color: rgba(234, 32, 41, 0.8);
   color: #ffffff;
 }
@@ -286,7 +289,6 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 50px 20px;
   text-align: center;
 }
 .program-container .program-title {
@@ -323,25 +325,11 @@ header {
 .program-container .search-container .search-input:focus {
   box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.05);
 }
-.program-container .search-container .search-button {
-  background-color: #e50914;
-  padding: 12px 24px;
-  border: none;
-  border-radius: 8px;
-  font-weight: 500;
-  font-size: 0.95rem;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-.program-container .search-container .search-button:hover {
-  background-color: #cc0812;
-}
 .program-container .category-grid {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 32px 20px;
   margin-top: 50px;
-  max-width: 900px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -362,7 +350,6 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 50px 20px;
   text-align: left;
 }
 .opportunities-container .opportunity-title {
@@ -390,16 +377,10 @@ header {
   gap: 5px;
 }
 .opportunities-container .program-card button, .opportunities-container .program-card .button2 {
-  color: red;
+  border: 0;
+  color: #ed1f24;
   background-color: transparent;
-  border: none;
-  margin-top: 5px;
   padding: 0px;
-}
-.opportunities-container .program-card button:hover, .opportunities-container .program-card .button2:hover {
-  background-color: #cc0812;
-  color: #fff;
-  padding: 5px 10px;
 }
 .opportunities-container .program-card span {
   color: #000;
@@ -464,6 +445,98 @@ header {
   height: 256.818px;
   align-self: stretch;
   aspect-ratio: 396/256.82;
+}
+
+.destination {
+  display: grid;
+  text-align: center;
+  gap: 20px;
+}
+.destination span {
+  color: #ed1f24;
+}
+
+.abroad-destination {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 32px;
+  padding: 60px 16px 120px 16px;
+}
+.abroad-destination span {
+  color: #ed1f24;
+}
+.abroad-destination .abroad-image {
+  height: 272px;
+  width: 100%;
+  align-self: stretch;
+}
+.abroad-destination ul {
+  counter-reset: item;
+  padding-left: 0;
+  list-style: none;
+  display: grid;
+  gap: 32px;
+}
+.abroad-destination li {
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 10px;
+}
+.abroad-destination li::before {
+  counter-increment: item;
+  content: counter(item);
+  position: absolute;
+  left: 0;
+  top: 0.3rem;
+  width: 1.2rem;
+  height: 1.2rem;
+  background-color: #ed1f24;
+  color: #ffffff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.7rem;
+}
+
+.experience {
+  text-align: center;
+  position: relative;
+}
+.experience span {
+  color: #ed1f24;
+}
+.experience button, .experience .button2 {
+  background-color: #ea2029;
+  color: #ffffff;
+  padding: 0.7rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  margin-top: 1rem;
+  cursor: pointer;
+}
+.experience .plane-wrapper {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 2rem;
+}
+.experience .plane-container {
+  position: relative;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+.experience .plane-container .plane-img {
+  position: absolute;
+  height: 100px;
+  width: 100px;
+  top: -25px;
+  left: 12px;
+  z-index: 2;
+}
+.experience .plane-container .plane-path {
+  width: 100%;
+  height: auto;
 }
 
 @media screen and (min-width: 744px) {
